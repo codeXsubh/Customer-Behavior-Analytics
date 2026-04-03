@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Local DB (optional scratch)
+*.db-journal
+
+# IDE
+.idea/
+.vscode/
+
+# Matplotlib cache (optional local)
+.mplconfig/
