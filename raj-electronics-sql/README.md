@@ -37,13 +37,26 @@ Run a single file:
 sqlite3 -header -column data/raj_electronics.db < sql/03_team_summary.sql
 ```
 
+### PostgreSQL (optional — VS Code / SQLTools / interview practice)
+
+```bash
+createdb raj_electronics
+cd raj-electronics-sql
+chmod +x scripts/*.sh
+./scripts/load_postgres.sh   # uses PGUSER/PGHOST/PGPORT/PGDATABASE (see script)
+psql -d raj_electronics -f postgres/02_kpis.sql
+```
+
+Reports live under `postgres/` (same logic as `sql/`, tuned for PostgreSQL). Full VS Code + Postgres steps: **`../docs/VS_CODE_AND_POSTGRES.md`**.
+
 ## Files
 
 | Path | Purpose |
 | --- | --- |
 | `data/clients.csv` | Clean, anonymized fact table |
-| `sql/01_schema.sql` | Table + checks |
-| `sql/02_kpis.sql` … `07_*.sql` | Reports |
+| `sql/01_schema.sql` | Table + checks (SQLite) |
+| `sql/02_kpis.sql` … `07_*.sql` | Reports (SQLite) |
+| `postgres/schema.sql`, `postgres/02_*.sql` … | Same reports for **PostgreSQL** |
 | `scripts/load_sqlite.sh` | CSV → SQLite |
 | `scripts/run_all_sql.sh` | Run all reports |
 

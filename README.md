@@ -15,12 +15,17 @@ python src/run_analysis.py
 
 Artifacts: CSV summaries and PNG charts under `outputs/`. SQL logic lives in `sql/`; data in `data/`.
 
+**VS Code:** Open this folder in VS Code and use the integrated terminal for the commands above. Recommended extensions are listed in `.vscode/extensions.json`.
+
+**PostgreSQL (optional):** To run the cohort/recency queries in **psql** or **SQLTools**, create a database, run `sql/postgres/00_setup.sql`, `\copy` the two CSVs from `data/`, then execute `sql/postgres/02_cohort_retention.sql` and `03_payment_recency_delinquency.sql`. Step-by-step: **`docs/VS_CODE_AND_POSTGRES.md`**.
+
 ## What’s inside
 
 | Piece | Purpose |
 | --- | --- |
-| `sql/02_cohort_retention.sql` | Monthly cohorts by first purchase; retention rate by period |
-| `sql/03_payment_recency_delinquency.sql` | Risk buckets by days since last payment |
+| `sql/02_cohort_retention.sql` | Monthly cohorts by first purchase; retention rate by period (SQLite) |
+| `sql/03_payment_recency_delinquency.sql` | Risk buckets by days since last payment (SQLite) |
+| `sql/postgres/*.sql` | Same analyses for **PostgreSQL** (optional) |
 | `src/run_analysis.py` | SQLite in-memory load, runs SQL, seasonal churn in Python, plots |
 | `scripts/generate_sample_data.py` | Reproducible synthetic customers + payments |
 

@@ -17,7 +17,8 @@ env/
 
 # IDE
 .idea/
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 
 # Matplotlib cache (optional local)
 .mplconfig/
