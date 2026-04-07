@@ -36,7 +36,7 @@ Generated in outputs/:
     
 📁 Project Structure
 
-    ├── data/                 # input datasets
+├── data/                 # input datasets
 ├── outputs/              # results (CSV + charts)
 ├── scripts/              # data generation
 ├── sql/                  # SQL queries
