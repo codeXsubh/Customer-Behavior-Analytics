@@ -66,3 +66,4 @@ Artifacts: CSV summaries and PNG charts under `outputs/`. SQL logic lives in `sq
 ---
 
 *This project demonstrates analytics skills; it is not financial advice and does not use real customer data.*
+# Customer-Behavior-Analytics
