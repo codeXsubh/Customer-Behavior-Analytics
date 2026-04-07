@@ -1,1 +1,1 @@
-Pearson correlation (days_since_payment vs delinquent_flag): 0.5655
+Correlation: 0.6772

@@ -1,0 +1,5 @@
+payment_recency_bucket,customers,avg_delinquency_rate,delinquent_count
+0-30 days,97,0.0,0
+31-60 days,11,0.7273,8
+61-90 days,16,1.0,16
+90+ days,376,1.0,376
